@@ -26,9 +26,9 @@ public class EmployeeValidator {
         if(!password_error.equals("")) {
             errors.add(password_error);
         }
+
         return errors;
     }
-
 
     private static String validateCode(String code, Boolean codeDuplicateCheckFlag) {
         if(code == null || code.equals("")) {
@@ -45,17 +45,17 @@ public class EmployeeValidator {
                 return "入力された社員番号の情報はすでに存在しています。";
             }
         }
+
         return "";
     }
-
 
     private static String validateName(String name) {
         if(name == null || name.equals("")) {
             return "氏名を入力してください。";
         }
+
         return "";
     }
-
 
     private static String validatePassword(String password, Boolean passwordCheckFlag) {
         if(passwordCheckFlag && (password == null || password.equals(""))) {
